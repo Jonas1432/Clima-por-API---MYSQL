@@ -1,5 +1,9 @@
 # Clima-por-API---MYSQL
 
+# Referencias 
+
+En los siguientes enlaces puedes encontrar cursos en la plataforma de edu.codigoiot.com 
+
 ## Instrucciones para la creacion de la base de datos correspondiente a este ejercicio
 
 1. Instalar MySQL Server
@@ -27,14 +31,17 @@
 - Para agregar información a la base de datos con NodeRed se requiere poner en un nodo Function la siguiente información
 
 `msg.topic = "INSERT INTO clima (`nombre`,`temperatura`,`humedad`) VALUES ('Jonathan'," + global.get ("tempAPI")+ "," + global.get ("humAPI") + ");";`
-
 `return msg;`
 
 - Puedes consultar todos los datos de una tabla con el siguiente comando `SELECT * FROM clima;`
 
 ## [Resultado]
 
-![](https://github.com/Jonas1432/Flow4-MQTT/blob/main/Flow-4.png)
+![](https://github.com/Jonas1432/Clima-por-API---MYSQL/blob/main/NodeRed-MYSQL.png)
+
+# ---------------------------------------------------------
+
+![](https://github.com/Jonas1432/Clima-por-API---MYSQL/blob/main/NodeRed-MYSQL.png)
 
 # Créditos
 
