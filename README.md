@@ -39,9 +39,9 @@ En los siguientes enlaces puedes encontrar cursos en la plataforma de edu.codigo
 
 ![](https://github.com/Jonas1432/Clima-por-API---MYSQL/blob/main/NodeRed-MYSQL.png)
 
-# ------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 
-![](hhttps://github.com/Jonas1432/Clima-por-API---MYSQL/blob/main/ClimaAPI.png)
+![](https://github.com/Jonas1432/Clima-por-API---MYSQL/blob/main/ClimaAPI.png)
 
 # Créditos
 
