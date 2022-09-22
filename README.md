@@ -43,6 +43,40 @@ En los siguientes enlaces puedes encontrar cursos en la plataforma de edu.codigo
 
 ![](https://github.com/Jonas1432/Clima-por-API---MYSQL/blob/main/ClimaAPI.png)
 
+## Segundo paso para configurar grafana
+
+Se llevara acabo la implementacion de grafana para la visualizacion de las graficas con valores un poco mas llamativos con el fin de tener mejor presentación.
+
+1. Eliminar el nodo timestamp de la base de datos y añadir 4 modulos tipo template.
+
+2. Se va modificar el siguiente query... 
+
+`msg.topic = "INSERT INTO clima (`nombre`,`temperatura`,`humedad`) VALUES ('" + msg.payload.id + "'," + msg.payload.temp + "," + msg.payload.hum + ");";
+return msg;`
+
+3. Dirigirse a grafana en el navegador web con la dirección localhost:3000
+
+4. Iniciar sesión el usuario y contraseña sera admin por ser primera vez, posteriormente se modificara la contraseña
+
+5. Agregar una nueva base de datos en la opción data source con los siguientes datos:
+    - Seleccionar la opcion MySQL
+    - Host: localhost:3306
+    - Database: Nombre de la base ya creada anteriormente
+    - User & Password: nombre y contraseña que se crearon anteriormente
+    - TimeZone: -05:00 para CDMX Dar clic en save&test para guardar
+
+6. Agregar 1 panel con el parámetro temperatura y mostrara la temperaturá publica de todos, agregar un segundo panel con el parámetro humedad.
+
+7. Para insertar los nuevos paneles de grafana se modificara `;allow_embedding = false` se modificación a lo siguiente `allow_embedding = true` y restauramos el servicion de grafana --> `sudo /bin/systemctl restart grafana-server`
+
+8. Verificamos que funcione en el NodeRed
+
+## [Resultados]
+
+![](https://github.com/Jonas1432/Clima-por-API---MYSQL/blob/main/Grafana.png)
+
+![](https://github.com/Jonas1432/Clima-por-API---MYSQL/blob/main/Grafana-clima.png)
+
 # Créditos
 
 * Desarrollado por Jonathan Araujo
